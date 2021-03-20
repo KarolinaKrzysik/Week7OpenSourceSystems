@@ -1,7 +1,7 @@
 <?php
-    $db = mysqli_connect ("intweb.bucks.ac.uk", "21904889", "mysqlpassword", "db4_21904889");
+    $db = mysqli_connect("localhost", "21904889", "mysqlpassword", "db4_21904889");
 
-    //Obtain the file sent to the server withing the response.
+    //Obtain the file sent to the server within the response.
     $image = $_FILES['monsterimage']['tmp_name'];
     $audio = $_FILES['monsteraudio']['tmp_name'];
 
