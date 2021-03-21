@@ -4,12 +4,11 @@
 
   $conn = mysqli_connect("localhost", "21904889", "mysqluser", "db4_21904889");
 
-  $sql = "SELECT image FROM monster WHERE id='" . $_GET[id] ."';";
+  $sql = "SELECT Image FROM monster WHERE id='" . $_GET[id] ."';";
 	
-  $result = mysqli_query($sql, $conn);
+  $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_array($result);
   
-  $jpg = $row["image"];
-
+  $jpg = $row["Image"];
   echo $jpg;
 ?>
