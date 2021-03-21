@@ -3,12 +3,12 @@
   <body>
 
     <?php
-
+      //Connect to the server
       $conn = mysqli_connect("localhost", "21904889", "mysqluser", "db4_21904889");
-
       $sql = "select id, Name from monster;";
-
+      //Catch query result
       $result = mysqli_query($conn, $sql);
+      //Display table header
       echo "<table align = 'center' border = '1'>";
         echo "<tr>
           <th width = '200' align = 'left'>ID</th>
@@ -16,10 +16,8 @@
           <th>Audio</th>
           <th>Image</th>
         </tr>";
-
-        
+        //Display data from database
         while($row = mysqli_fetch_assoc($result)){
-          print_r($row);
           echo "<tr>
             <td>$row[id]</td>
             <td>$row[Name]</td>
@@ -28,12 +26,8 @@
           </tr>";
         }
       echo "</table>";
-      
-
       mysqli_close();
     ?>
-
-  
   </body>
 </html>
 
