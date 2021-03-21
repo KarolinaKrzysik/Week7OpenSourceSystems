@@ -6,10 +6,9 @@
 
       $conn = mysqli_connect("localhost", "21904889", "mysqluser", "db4_21904889");
 
-      $sql = "select id from monster;";
+      $sql = "select id, Name from monster;";
 
       $result = mysqli_query($conn, $sql);
-      echo "test";
       echo "<table align = 'center' border = '1'>";
         echo "<tr>
           <th width = '200' align = 'left'>ID</th>
@@ -19,8 +18,8 @@
         </tr>";
 
         
-        while($row = mysqli_fetch_array($result)){
-          var_dump($row[Name]);
+        while($row = mysqli_fetch_assoc($result)){
+          print_r($row);
           echo "<tr>
             <td>$row[id]</td>
             <td>$row[Name]</td>
