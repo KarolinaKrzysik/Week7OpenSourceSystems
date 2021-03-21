@@ -2,7 +2,7 @@
 
   header("Content-type: audio/wav");
 
-  $conn = mysqli_connect("localhost", "21904889"," mysqlpassword ", "db4_21904889");
+  $conn = mysqli_connect("localhost", "21904889", "mysqluser", "db4_21904889");
 
   $sql = "SELECT audio FROM monster WHERE id='" . $_GET[id] ."';";
 	
